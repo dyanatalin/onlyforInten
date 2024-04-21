@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ucapan Ulang Tahun</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+}
+
+.gallery-item img {
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Selamat Ulang Tahun Beb Inten Acuuu!</h1>
+  <div class="pertanyaan">
+    <p>Pertanyaan 1: Semoga Bahagia Selalu, Sehat, Lancer Kerjaan Yaa Sayanggg</p>
+    <button class="tombol" onclick="jawabPertanyaan('Luv U')">Luv U</button>
+    <button class="tombol" onclick="jawabPertanyaan('kalo diklik berenti loh')">kalo diklik berenti loh</button>
+  </div>
+
+  <div class="pertanyaan" style="display: none;">
+    <p>Pertanyaan 2: Can't Wait To See You Soon!!!!</p>
+    <button class="tombol" onclick="jawabPertanyaan('sayanggggg banget hihihi')">sayanggggg banget hihihi</button>
+    <button class="tombol" onclick="jawabPertanyaan('aku ngga')">aku ngga</button>
+  </div>
+
+  <div class="pertanyaan" style="display: none;">
+    <p>Pertanyaan 3: Thank You for everythingggg</p>
+    <button class="tombol" onclick="jawabPertanyaan('you are the most lovable person on Earth!!!')">you are the most lovable person on Earth!!!</button>
+    <button class="tombol" onclick="jawabPertanyaan('Semogaaa apaa yang kamu inginkan tercapai pokoknya!!!!')">Semogaaa apaa yang kamu inginkan tercapai pokoknya!!!!</button>
+  </div>
+
+  <div class="gallery" id="foto" style="display: none;">
+    <div class="gallery-item">
+      <a href="https://imgur.com/YgS3QUR.jpg" class="image-link">
+        <img src="https://imgur.com/YgS3QUR.jpg" alt="Foto 1">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="https://imgur.com/p4yLtUP.jpg" class="image-link">
+        <img src="https://imgur.com/p4yLtUP.jpg" alt="Foto 2">
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a href="https://imgur.com/uCxOxDY.jpg" class="image-link">
+        <img src="https://imgur.com/uCxOxDY.jpg" alt="Foto 3">
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+let currentPertanyaan = 0;
+const pertanyaan = document.querySelectorAll('.pertanyaan');
+
+function jawabPertanyaan(jawaban) {
+  if (currentPertanyaan < pertanyaan.length - 1) {
+    pertanyaan[currentPertanyaan].style.display = 'none';
+    currentPertanyaan++;
+    pertanyaan[currentPertanyaan].style.display = 'block';
+  } else {
+    if (jawaban === 'Luv U' || jawaban === 'sayanggggg banget hihihi' || jawaban === 'you are the most lovable person on Earth!!!') {
+      document.getElementById('foto').style.display = 'flex';
+    } else {
+      // Tambahkan kode di sini jika ingin menampilkan pesan jika jawabannya 'Tidak', 'Kecil', atau 'Bahagia'
+    }
+  }
+}
+</script>
+
+</body>
+</html>
